@@ -13,8 +13,10 @@
     "json-server": "^0.16.3",
     "terser-webpack-plugin": "^5.3.10",
     "vue": "^3.0.0",
+    "vue-loader": "^17.4.2",
     "vue-router": "^4.0.4",
-    "vue-styled-components": "^1.6.0"
+    "vue-styled-components": "^1.6.0",
+    "webpack": "^5.89.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
