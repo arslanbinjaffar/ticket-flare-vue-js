@@ -1,12 +1,22 @@
+// vue.config.js
 module.exports = {
+  // If your app is not in the root of your repository, specify the publicPath
+  // publicPath: '/your-app/',
+
+  // Output directory for the build
+  outputDir: 'dist',
+
+  // Set the assets directory
+  assetsDir: 'assets',
+
+  // Configure the production server
   devServer: {
+    // Your Vercel app's serverless functions endpoint
     proxy: {
-      '^/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true,
-        logLevel: 'debug',
-        pathRewrite: { '^/api': '/' },
+      '/.netlify/functions': {
+        target: 'http://localhost:9000', // Change this to your serverless functions endpoint
+        pathRewrite: { '^/.netlify/functions': '' },
       },
     },
   },
-}
+};
